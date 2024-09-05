@@ -1,0 +1,196 @@
+Question-1
+
+package dsa.String_And_CharArray;
+
+public class Check_String_Palindrome {
+
+	static boolean checkPalindrome(String s) {
+		     
+		int start = 0;
+		int end = s.length()-1;
+		
+		while (start<end) {
+			if (s.charAt(start)!=s.charAt(end)) {
+				return false;
+			} else {
+               start++;
+               end--;
+			}
+		}
+		return true;
+		
+	}
+	public static void main(String[] args) {
+		String s1 = "NOOn";
+		boolean ans  = checkPalindrome(s1);
+		System.out.println(ans);
+		if (ans) {
+			System.out.println("String is palindrome");
+		} else {
+            System.out.println("String is not palindrome");
+		}
+	}
+}
+
+//Question-2
+
+import java.util.Scanner;
+public class Armstrong_number {
+
+	public static void main(String[] args) {
+		System.out.println("Enter 3 digit positive number");
+		Scanner sc= new Scanner(System.in);
+		int num=sc.nextInt();
+		int temp=0;
+		int ori=num;
+		while(num!=0) {
+			int rem= num%10;
+			temp=(int) (temp+ Math.pow(rem, 3));
+			num=num/10;
+
+		}
+		if(ori ==temp) {
+			System.out.println("Armstrong number");
+		}else {
+			System.out.println("Not Armstrong number");
+		}
+
+		sc.close();
+	}
+
+}
+
+
+
+Question-3
+
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        
+        int n = 10; 
+
+        
+        int a = 0; 
+        int b = 1;
+        
+        System.out.println("Fibonacci Series up to " + n + " terms:");
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            
+           
+            int nextTerm = a + b;
+            a = b;
+            b = nextTerm;
+        }
+    }
+}
+
+Question 4 print  the table
+
+import java.util.Scanner;
+ 
+class Table {
+ 
+ public static void main(String[] args) {
+  /
+  Scanner in = new Scanner(System.in);
+   
+  
+  System.out.print("Input a number: ");
+  
+  
+  int num1 = in.nextInt();
+   
+  
+  for (int i = 0; i < 10; i++) {
+     
+     System.out.println(num1 + " x " + (i + 1) + " = " + (num1 * (i + 1)));
+  }
+ }
+}
+
+Question 5 
+
+mport java.util.Scanner;
+class LargestNumber{
+    public static void main(String[] args) 
+    {
+        int x, y, z;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        x = s.nextInt();
+        System.out.print("Enter the second number: ");
+        y = s.nextInt();
+        System.out.print("Enter the third number: ");
+        z = s.nextInt();
+        if ( x > y )
+        {
+            if ( x > z )
+            {
+                System.out.println("Largest number: " + x);
+            }
+            else
+            {
+                System.out.println("Largest number: " + z);
+            }
+        }
+        else
+        {
+            if ( y > z )
+            {
+                System.out.println("Largest number: " + y);
+            }
+            else 
+            {
+                System.out.println("Largest number: " + z);
+            }
+        }
+    }
+}
+
+Question 6
+
+import java.util.Scanner;
+
+public class GradingSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of students: ");
+        int numStudents = scanner.nextInt();
+        Student[] students = new Student[numStudents];
+
+        for (int i = 0; i < numStudents; i++) {
+            System.out.print("Enter student name: ");
+            String name = scanner.next();
+            System.out.print("Enter student score: ");
+            int score = scanner.nextInt();
+            students[i] = new Student(name, score);
+        }
+        scanner.close();
+
+        for (Student student : students) {
+            System.out.println(student.getName() + "'s Grade: " + student.getGrade());
+        }
+    }
+}
+
+Question 7
+
+import java.util.Scanner;
+
+public class LeftAngleTriangle {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of rows: ");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
